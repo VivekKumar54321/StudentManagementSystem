@@ -4,6 +4,38 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\Students1\**" />
+    <Compile Remove="Views\Students\**" />
+    <Content Remove="Views\Students1\**" />
+    <Content Remove="Views\Students\**" />
+    <EmbeddedResource Remove="Views\Students1\**" />
+    <EmbeddedResource Remove="Views\Students\**" />
+    <None Remove="Views\Students1\**" />
+    <None Remove="Views\Students\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Students1Controller.cs" />
+    <Compile Remove="Controllers\StudentsController.cs" />
+    <Compile Remove="ViewModel\StudentViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
 
 
 </Project>
